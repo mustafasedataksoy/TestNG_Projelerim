@@ -11,7 +11,7 @@ public class Giris {
     }
 
     @Test(priority = 2)
-    void loginİsleminiYap()
+    void loginIsleminiYap()
     {
         System.out.println("login test işlemlerii yapıldı");
     }
