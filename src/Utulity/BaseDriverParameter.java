@@ -16,7 +16,7 @@ import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class BaseDriverParameter {
+public class BaseDriverParameter {    // BASEDRIVERPARAMETER  XML DEN CALISTIRMAK ICIN YAPTIK HEM CHROME HEM FIREFOX
 
     public  WebDriver driver; // STATIC YAPMIYORUZ CUNKU PARALEL TEST YAPARKEN ÇAKIŞIYOR AYRI AYRI DRIVER YAPTIK.
     public static WebDriverWait wait;
