@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -22,7 +23,7 @@ public class BaseDriver {
 
 
 
-    @BeforeClass
+    @BeforeClass(groups = "Smoke Test")
     public void baslangicIslemleri(){
         System.out.println("Baslangic islemleri");
         Logger logger = Logger.getLogger("");
@@ -32,6 +33,7 @@ public class BaseDriver {
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");// Chrome sessiz çalışşsın consolda yazmasın.
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver = new ChromeDriver();
+
         // driver.manage().window().setPosition(new Point(-1650,130));
 
         //driver.manage().window().maximize();
@@ -73,7 +75,7 @@ public class BaseDriver {
 
 
 
-    @AfterClass(enabled = true)
+    @AfterClass(enabled = true,groups = "Smoke Test")
     public void bitisIslemleri()
     {
         System.out.println("Bitis islemleri ");
